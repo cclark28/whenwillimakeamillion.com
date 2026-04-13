@@ -78,6 +78,54 @@ const VIBES = {
       "Slow money is real money. You're playing the long game and that's completely fine.",
       "Your grandparents did it this way and they're fine. You're gonna be fine.",
     ]
+  },
+  hustle: {
+    label: 'Hustle Lord',
+    returnRate: 9,
+    raiseMultiplier: 1.3,
+    savingsMultiplier: 2.0,
+    roasts: [
+      "Day job. Side job. Side-side job. Your calendar has no weekends and neither does your portfolio.",
+      "You're saving twice what a normal person makes. That's either inspiring or a cry for help.",
+      "Three revenue streams before breakfast. Your therapist says this is a problem. Your brokerage doesn't care.",
+      "The grind is real. The compound interest is realer. Keep going, you unhinged legend.",
+    ]
+  },
+  minimalist: {
+    label: 'Monk Mode',
+    returnRate: 7,
+    raiseMultiplier: 0.6,
+    savingsMultiplier: 1.9,
+    roasts: [
+      "You don't want more money. You want fewer expenses. That's actually the cheat code.",
+      "Monk mode: no subscriptions, no dining out, no fun — and also no working until 65.",
+      "You spend less than a medieval peasant and invest the rest. Respect.",
+      "Your idea of a luxury purchase is a name-brand tin of sardines. The numbers love you for it.",
+    ]
+  },
+  yolo: {
+    label: 'YOLO',
+    returnRate: 22,
+    raiseMultiplier: 1.0,
+    savingsMultiplier: 0.5,
+    roasts: [
+      "You're betting it all on 30%+ returns and saving almost nothing. Bold strategy, Cotton.",
+      "The math says yes. The market says hold my beer. Good luck out there.",
+      "This is either going to be a great story or a cautionary tale. We'll find out which.",
+      "YOLO mode: statistically unlikely, emotionally very online, and weirdly respectable.",
+    ]
+  },
+  latebloomer: {
+    label: 'Late Bloomer',
+    returnRate: 7,
+    raiseMultiplier: 1.0,
+    savingsMultiplier: 1.2,
+    roasts: [
+      "Starting late doesn't mean finishing last. Compound interest doesn't care when you showed up.",
+      "Better late than never. Literally — the math on 'never' is significantly worse.",
+      "Warren Buffett made 90% of his wealth after 65. You're still in the game.",
+      "You found the path after everyone else started running. That's fine. Paths don't expire.",
+    ]
   }
 };
 

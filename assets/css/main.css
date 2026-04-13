@@ -255,24 +255,16 @@ body::before {
 
 .vibe-pills {
   display: flex;
-  gap: var(--space-sm);
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 2px;
-}
-
-.vibe-pills::-webkit-scrollbar {
-  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .vibe-pill {
-  flex-shrink: 0;
   background: var(--color-surface-2);
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-pill);
-  padding: 8px 16px;
-  font-size: 0.8rem;
+  padding: 6px 13px;
+  font-size: 0.78rem;
   font-weight: 500;
   font-family: var(--font-body);
   color: var(--color-text-secondary);

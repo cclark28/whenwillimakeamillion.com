@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>Articles — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="Honest, no-BS guides on building wealth: compound interest, savings rates, cutting costs, earning more, and how to actually reach $1,000,000.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whenwillimakeamillion.com/blog/">
+  <meta property="og:title" content="Articles — WhenWillIMakeAMillion.com">
+  <meta property="og:description" content="Honest, no-BS guides on building wealth: compound interest, savings rates, cutting costs, earning more, and how to actually reach $1,000,000.">
+  <meta property="og:image" content="https://whenwillimakeamillion.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Articles — WhenWillIMakeAMillion.com">
+  <meta name="twitter:description" content="Honest, no-BS guides on building wealth: compound interest, savings rates, cutting costs, earning more, and how to actually reach $1,000,000.">
+  <meta name="twitter:image" content="https://whenwillimakeamillion.com/assets/og-image.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +24,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -23,6 +34,9 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -31,7 +45,32 @@
     <p>Honest guides on building wealth — earning more, spending less, and investing the difference.</p>
   </div>
 
-  <main class="blog-grid">
+  <!-- Search + Tag Filter -->
+  <div class="blog-search-bar">
+    <div class="blog-search-input-wrap">
+      <span class="blog-search-icon">🔍</span>
+      <input type="text" id="blog-search" placeholder="Search articles..." autocomplete="off">
+    </div>
+    <div class="blog-tag-filters" role="group" aria-label="Filter by tag">
+      <button class="tag-filter-pill active" data-tag="all">All</button>
+      <button class="tag-filter-pill" data-tag="Earn More">Earn More</button>
+      <button class="tag-filter-pill" data-tag="Save More">Save More</button>
+      <button class="tag-filter-pill" data-tag="Cut Costs">Cut Costs</button>
+      <button class="tag-filter-pill" data-tag="Strategy">Strategy</button>
+      <button class="tag-filter-pill" data-tag="Investing">Investing</button>
+      <button class="tag-filter-pill" data-tag="Retirement">Retirement</button>
+      <button class="tag-filter-pill" data-tag="Mindset">Mindset</button>
+      <button class="tag-filter-pill" data-tag="FIRE">FIRE</button>
+      <button class="tag-filter-pill" data-tag="Basics">Basics</button>
+      <button class="tag-filter-pill" data-tag="Economics">Economics</button>
+      <button class="tag-filter-pill" data-tag="Beginner">Beginner</button>
+      <button class="tag-filter-pill" data-tag="Tax Strategy">Tax Strategy</button>
+      <button class="tag-filter-pill" data-tag="Benchmarks">Benchmarks</button>
+      <button class="tag-filter-pill" data-tag="By Age">By Age</button>
+    </div>
+  </div>
+
+  <main id="main-content" class="blog-grid" id="blog-grid">
 
     <!-- EARN MORE -->
 
@@ -415,6 +454,10 @@
       </div>
     </a>
 
+    <div class="blog-no-results" id="blog-no-results">
+      😬 No articles match that. Try a different search or tag.
+    </div>
+
     <a class="blog-photo-card" href="/blog/millionaire-habits/">
       <div class="blog-photo-card-img">
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=480&q=80" alt="Discipline and focus" loading="lazy">
@@ -435,10 +478,85 @@
         <li><a href="/">Calculator</a></li>
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      const searchInput = document.getElementById('blog-search');
+      const tagPills = document.querySelectorAll('.tag-filter-pill');
+      const cards = document.querySelectorAll('.blog-photo-card');
+      const noResults = document.getElementById('blog-no-results');
+
+      let activeTag = 'all';
+      let searchQuery = '';
+
+      function getCardTag(card) {
+        const tagEl = card.querySelector('.post-tag');
+        return tagEl ? tagEl.textContent.trim() : '';
+      }
+
+      function getCardText(card) {
+        const title = card.querySelector('.post-title-sm')?.textContent || '';
+        const excerpt = card.querySelector('.post-excerpt')?.textContent || '';
+        const tag = getCardTag(card);
+        return (title + ' ' + excerpt + ' ' + tag).toLowerCase();
+      }
+
+      function filterCards() {
+        let visible = 0;
+        cards.forEach(card => {
+          const matchTag = activeTag === 'all' || getCardTag(card) === activeTag;
+          const matchSearch = !searchQuery || getCardText(card).includes(searchQuery.toLowerCase());
+          const show = matchTag && matchSearch;
+          card.classList.toggle('hidden', !show);
+          if (show) visible++;
+        });
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      tagPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          tagPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeTag = pill.dataset.tag;
+          filterCards();
+        });
+      });
+
+      let debounce;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => {
+          searchQuery = searchInput.value.trim();
+          filterCards();
+        }, 200);
+      });
+    })();
+  </script>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

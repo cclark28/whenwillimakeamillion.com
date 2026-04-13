@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>How to Invest Your First $10,000: The Only Roadmap You Need — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="A four-step roadmap to investing your first $10,000: emergency fund, employer match, Roth IRA, and taxable brokerage. Start here.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/blog/how-to-invest-first-10000/">
@@ -40,8 +41,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -49,6 +51,9 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -75,7 +80,7 @@
     </div>
   </div>
 
-  <article class="post-body">
+  <article id="main-content" class="post-body">
     <p>You&#39;ve got $10,000. Maybe you saved it. Maybe you got a bonus. Maybe you finally sold something. Now the terrifying question: what the hell do you do with it?</p>
 <p>The financial world wants you to think this is complicated. It&#39;s not. There&#39;s a clear, logical order to deploy that money, and if you follow it, you&#39;ll be ahead of 90% of people your age.</p>
 <h2>The Four-Step Roadmap</h2>
@@ -169,9 +174,29 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

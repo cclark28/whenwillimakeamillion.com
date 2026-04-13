@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>How to Use Credit Cards to Build Wealth Instead of Debt — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="Used correctly, credit cards are a 2% discount on everything you buy. Used incorrectly, they're 24% interest that destroys your savings. Here's the difference.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/blog/credit-cards-for-wealth/">
@@ -40,8 +41,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -49,6 +51,9 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -75,7 +80,7 @@
     </div>
   </div>
 
-  <article class="post-body">
+  <article id="main-content" class="post-body">
     <p>Credit cards are one of the most controversial tools in personal finance. Dave Ramsey says destroy them all. Points-and-miles enthusiasts say they&#39;re free money. Both positions are too simple.</p>
 <p>Here&#39;s the actual picture.</p>
 <h2>How Credit Cards Make Money for You (If You Pay in Full)</h2>
@@ -164,9 +169,29 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

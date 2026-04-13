@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>What Inflation Does to Your Million-Dollar Goal (And How to Fight It) — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="$1M in 2025 isn't $1M in 2045. At 3% inflation, it's worth $554K. Here's the math and the solution.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/blog/inflation-and-your-million/">
@@ -40,8 +41,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -49,6 +51,9 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -75,7 +80,7 @@
     </div>
   </div>
 
-  <article class="post-body">
+  <article id="main-content" class="post-body">
     <p>Let&#39;s say you hit your million-dollar goal in 2045. You retire. You&#39;ve got $1,000,000 in the bank.</p>
 <p>Here&#39;s the problem: it&#39;s not worth $1,000,000.</p>
 <p>At 3% average inflation—which is mild by historical standards—that $1 million has the purchasing power of $554,000 in 2025 dollars. You&#39;ve lost nearly half without spending a penny.</p>
@@ -192,9 +197,29 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

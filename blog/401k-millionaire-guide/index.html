@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>How to Become a 401(k) Millionaire: The Step-by-Step Guide — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="Max your 401(k) in 2025 ($23,000), get employer match, invest in index funds. $1.6M in 25 years. The most boring path to wealth.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/blog/401k-millionaire-guide/">
@@ -40,8 +41,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -49,6 +51,9 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -75,7 +80,7 @@
     </div>
   </div>
 
-  <article class="post-body">
+  <article id="main-content" class="post-body">
     <p>A 401(k) is the most boring investment vehicle in the world. It&#39;s also one of the most powerful tools for building wealth if you actually use it correctly.</p>
 <p>The numbers are simple: max out your 401(k), capture your employer match, and you&#39;ll likely hit a million dollars before you&#39;re ready to retire. This isn&#39;t a get-rich-quick scheme. It&#39;s just mathematics working in your favor for 25+ years.</p>
 <h2>2025 Contribution Limits (Know the Numbers)</h2>
@@ -246,9 +251,29 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

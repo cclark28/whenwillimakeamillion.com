@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>Your Car Is Probably Your Biggest Financial Mistake — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="The true cost of car ownership — loan interest, insurance, gas, maintenance, depreciation — is one of the most underestimated wealth killers out there.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/blog/your-car-is-a-mistake/">
@@ -40,8 +41,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -49,6 +51,9 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -75,7 +80,7 @@
     </div>
   </div>
 
-  <article class="post-body">
+  <article id="main-content" class="post-body">
     <p>Americans think of car payments as normal. As just part of life. As a number that goes in the budget alongside rent and groceries.</p>
 <p>The average car payment is now $735/month for a new car, $523/month for used. That&#39;s the payment alone. Add insurance, gas, maintenance, parking, and registration — and the average American spends $1,000–$1,300/month on their vehicle.</p>
 <p>That number, invested instead, is the difference between retiring wealthy and retiring broke.</p>
@@ -163,9 +168,29 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

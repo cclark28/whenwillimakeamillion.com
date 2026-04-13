@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <title>404 — Page Not Found — WhenWillIMakeAMillion.com</title>
+  <meta name="description" content="Oops! This page doesn't exist. But your path to $1M still does — get back to the calculator.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
+      <ul class="nav-links">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Articles</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content" class="error-404">
+    <div class="error-404-content">
+      <div class="error-404-icon">🚀</div>
+      <h1>404 — Page Lost in Space</h1>
+      <p class="error-404-subtitle">This page doesn't exist. But your path to $1 million absolutely does.</p>
+      <div class="error-404-actions">
+        <a href="/" class="btn btn-primary">Back to Calculator</a>
+        <a href="/blog/" class="btn btn-secondary">Read Articles</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Articles</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — Not financial advice.</p>
+    </div>
+  </footer>
+
+  <style>
+    .error-404 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 120px - 80px);
+      padding: var(--space-xl);
+    }
+
+    .error-404-content {
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .error-404-icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-md);
+      animation: floatUp 3s ease-in-out infinite;
+    }
+
+    @keyframes floatUp {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .error-404 h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: var(--space-sm);
+      letter-spacing: -0.02em;
+    }
+
+    .error-404-subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+      line-height: 1.6;
+    }
+
+    .error-404-actions {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-404-actions .btn {
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .error-404-actions .btn-primary {
+      background: var(--color-gold);
+      color: var(--color-text-on-gold);
+    }
+
+    .error-404-actions .btn-primary:hover {
+      background: var(--color-gold-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245, 200, 66, 0.3);
+    }
+
+    .error-404-actions .btn-secondary {
+      background: var(--color-surface-2);
+      color: var(--color-text-primary);
+      border: 1px solid var(--color-border);
+    }
+
+    .error-404-actions .btn-secondary:hover {
+      background: var(--color-surface-3);
+      color: var(--color-gold);
+      border-color: var(--color-gold);
+    }
+
+    @media (max-width: 768px) {
+      .error-404 {
+        min-height: auto;
+        padding: var(--space-lg);
+      }
+
+      .error-404 h1 {
+        font-size: 1.75rem;
+      }
+
+      .error-404-actions {
+        flex-direction: column;
+      }
+
+      .error-404-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

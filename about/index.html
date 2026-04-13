@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
   <title>About — WhenWillIMakeAMillion.com</title>
   <meta name="description" content="Why we built a millionaire timeline calculator that's actually fun to use — and how the math works.">
   <link rel="canonical" href="https://whenwillimakeamillion.com/about/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whenwillimakeamillion.com/about/">
+  <meta property="og:title" content="About — WhenWillIMakeAMillion.com">
+  <meta property="og:description" content="Why we built a millionaire timeline calculator that's actually fun — and how the math works.">
+  <meta property="og:image" content="https://whenwillimakeamillion.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — WhenWillIMakeAMillion.com">
+  <meta name="twitter:description" content="Why we built a millionaire timeline calculator that's actually fun — and how the math works.">
+  <meta name="twitter:image" content="https://whenwillimakeamillion.com/assets/og-image.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span class="logo-icon">🚀</span> WhenWillIMakeAMillion</a>
       <ul class="nav-links">
@@ -22,10 +34,13 @@
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <main class="about-content">
+  <main id="main-content" class="about-content">
     <h1>About This Calculator</h1>
 
     <p>
@@ -106,10 +121,31 @@
         <li><a href="/">Calculator</a></li>
         <li><a href="/blog/">Articles</a></li>
         <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
       </ul>
-      <p class="footer-copy">© 2025 WhenWillIMakeAMillion.com — Not financial advice.</p>
+      <p class="footer-copy">© 2026 WhenWillIMakeAMillion.com — Not financial advice.</p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

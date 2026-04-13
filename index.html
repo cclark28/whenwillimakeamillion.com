@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Will I Make a Million? — Free Millionaire Timeline Calculator</title>
+  <meta name="description" content="Find out exactly when you'll hit $1,000,000. Enter your savings, income, and investments — get your millionaire timeline with rocket animations, achievement badges, and a shareable result card.">
+  <meta name="keywords" content="millionaire calculator, when will I be a millionaire, millionaire timeline, compound interest calculator, financial independence calculator">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://whenwillimakeamillion.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whenwillimakeamillion.com/">
+  <meta property="og:title" content="When Will I Make a Million? — Free Millionaire Timeline Calculator">
+  <meta property="og:description" content="Find out exactly when you'll hit $1,000,000. Gamified, shareable, and actually fun.">
+  <meta property="og:image" content="https://whenwillimakeamillion.com/assets/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When Will I Make a Million?">
+  <meta name="twitter:description" content="Free millionaire timeline calculator. Fun, fast, shareable.">
+  <meta name="twitter:image" content="https://whenwillimakeamillion.com/assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "When Will I Make a Million?",
+    "url": "https://whenwillimakeamillion.com",
+    "description": "Free millionaire timeline calculator — find out exactly when you'll hit $1,000,000.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4785900830813173" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🚀</span>
+        WhenWillIMakeAMillion
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Articles</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      🏆 Millionaire Timeline Calculator
+    </div>
+    <h1>
+      When will you<br>
+      hit <span class="gold">$1,000,000</span>?
+    </h1>
+    <p class="hero-sub">
+      Plug in your numbers. Get your exact date. Share your roast.
+      No boring spreadsheets — just the truth.
+    </p>
+  </section>
+
+  <!-- Calculator -->
+  <div class="calc-wrap">
+    <div class="calc-card">
+
+      <!-- Vibe Mode -->
+      <div class="vibe-section">
+        <div class="vibe-label">Pick your vibe</div>
+        <div class="vibe-pills" role="group" aria-label="Calculator mode">
+          <button class="vibe-pill active" data-vibe="realistic">😐 Realistic</button>
+          <button class="vibe-pill" data-vibe="optimist">🌟 Optimist</button>
+          <button class="vibe-pill" data-vibe="fire">🔥 FIRE Mode</button>
+          <button class="vibe-pill" data-vibe="techbro">💻 Tech Bro</button>
+          <button class="vibe-pill" data-vibe="crypto">🎰 Crypto Gambler</button>
+          <button class="vibe-pill" data-vibe="slowburn">🐢 Slow &amp; Steady</button>
+        </div>
+      </div>
+
+      <!-- Inputs -->
+      <div class="inputs-section">
+        <div class="inputs-grid">
+
+          <!-- Current Savings -->
+          <div class="input-group">
+            <label class="input-label" for="current-savings">Current Savings</label>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="current-savings" name="current-savings"
+                value="10000" min="0" max="999999999"
+                placeholder="10,000" aria-describedby="savings-hint">
+            </div>
+          </div>
+
+          <!-- Monthly Savings -->
+          <div class="input-group">
+            <label class="input-label" for="monthly-savings">Monthly Savings</label>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="monthly-savings" name="monthly-savings"
+                value="1000" min="0" max="100000"
+                placeholder="1,000">
+            </div>
+          </div>
+
+          <!-- Annual Income -->
+          <div class="input-group">
+            <label class="input-label" for="annual-income">Annual Income</label>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="annual-income" name="annual-income"
+                value="75000" min="0" max="10000000"
+                placeholder="75,000">
+            </div>
+          </div>
+
+          <!-- Annual Raise -->
+          <div class="input-group">
+            <label class="input-label" for="annual-raise">Expected Annual Raise</label>
+            <div class="input-wrap has-suffix">
+              <input type="number" id="annual-raise" name="annual-raise"
+                value="3" min="0" max="50" step="0.5"
+                placeholder="3">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+
+          <!-- Return Rate Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <label class="input-label" for="return-rate">Expected Annual Return</label>
+              <span class="slider-value" id="return-rate-display">7.0%</span>
+            </div>
+            <input type="range" id="return-rate" name="return-rate"
+              min="0" max="30" value="7" step="0.5"
+              aria-valuemin="0" aria-valuemax="30" aria-valuenow="7"
+              aria-label="Expected annual return rate">
+          </div>
+
+          <!-- Inflation Toggle -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <label class="input-label" for="inflation-rate">Inflation Rate</label>
+              <span class="slider-value" id="inflation-rate-display">2.5%</span>
+            </div>
+            <input type="range" id="inflation-rate" name="inflation-rate"
+              min="0" max="10" value="2.5" step="0.5"
+              aria-valuemin="0" aria-valuemax="10" aria-valuenow="2.5"
+              aria-label="Inflation rate">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="calc-action">
+        <button class="btn-calculate" id="btn-calculate" type="button">
+          🚀 Calculate My Million
+        </button>
+      </div>
+
+      <!-- Results Panel -->
+      <div class="results-panel" id="results-panel" aria-live="polite">
+
+        <!-- Big Result -->
+        <div class="result-hero">
+          <div class="result-label">You'll hit $1,000,000 in</div>
+          <div class="result-years" id="result-years">—</div>
+          <div class="result-date">
+            That's <span class="highlight" id="result-date-str">—</span>
+          </div>
+        </div>
+
+        <!-- Roast -->
+        <div class="roast-box" id="roast-box">
+          <span class="roast-icon">💬</span>
+          <span id="roast-text"></span>
+        </div>
+
+        <!-- Rocket Progress -->
+        <div class="progress-section">
+          <div class="progress-header">
+            <span>$0</span>
+            <span>$1,000,000</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill">
+              <span class="progress-rocket">🚀</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-total-contributed">—</div>
+            <div class="stat-label">You Contribute</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-teal" id="stat-interest-earned">—</div>
+            <div class="stat-label">Interest Earns</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-gold" id="stat-net-worth-real">—</div>
+            <div class="stat-label">Real Value Today</div>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-section">
+          <div class="chart-title">📈 Your wealth trajectory</div>
+          <div class="chart-wrap">
+            <canvas id="wealth-chart" aria-label="Wealth growth chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="badges-section">
+          <div class="badges-title">🏆 Achievements</div>
+          <div class="badges-grid" id="badges-grid">
+            <div class="badge" id="badge-fast" data-threshold="5">
+              <div class="badge-icon">⚡</div>
+              <div class="badge-name">Speed Runner</div>
+            </div>
+            <div class="badge" id="badge-saver" data-type="saver">
+              <div class="badge-icon">💰</div>
+              <div class="badge-name">Power Saver</div>
+            </div>
+            <div class="badge" id="badge-investor" data-type="investor">
+              <div class="badge-icon">📈</div>
+              <div class="badge-name">Compounding King</div>
+            </div>
+            <div class="badge" id="badge-decade" data-threshold="10">
+              <div class="badge-icon">🗓️</div>
+              <div class="badge-name">Decade Club</div>
+            </div>
+            <div class="badge" id="badge-started" data-type="started">
+              <div class="badge-icon">🎯</div>
+              <div class="badge-name">Already Started</div>
+            </div>
+            <div class="badge" id="badge-optimist" data-type="optimist">
+              <div class="badge-icon">🌙</div>
+              <div class="badge-name">Moonshot</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share -->
+        <div class="share-section">
+          <span class="share-label">Share your result</span>
+          <button class="btn-share" id="btn-share-card" type="button">
+            🔗 Create Share Card
+          </button>
+          <button class="btn-copy" id="btn-copy-roast" type="button">
+            📋 Copy Roast
+          </button>
+        </div>
+
+      </div>
+      <!-- /results-panel -->
+
+    </div>
+    <!-- /calc-card -->
+  </div>
+  <!-- /calc-wrap -->
+
+  <!-- Why This Calculator -->
+  <section class="why-section">
+    <h2>Why this calculator hits different</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">🎯</div>
+        <h3>Real math, real date</h3>
+        <p>Compound interest formula with your actual raise trajectory — not a generic "7% forever" assumption.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🎭</div>
+        <h3>Six personality modes</h3>
+        <p>From FIRE fanatic to Crypto Gambler — pick your scenario and see how your assumptions change the timeline.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🚀</div>
+        <h3>Gamified progress</h3>
+        <p>Rocket launch bar, achievement badges, and a roast that tells you exactly where you stand. No sugarcoating.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">📤</div>
+        <h3>Shareable result card</h3>
+        <p>One click to generate a card worth posting. "I'll be a millionaire by 2039 — eat that." Your friends need to see this.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview -->
+  <section class="blog-preview">
+    <div class="section-header">
+      <h2>📚 Read the playbook</h2>
+      <a href="/blog/">All articles →</a>
+    </div>
+    <div class="blog-grid" id="blog-preview-grid">
+      <!-- Populated by JS or static -->
+      <a class="blog-card" href="/blog/how-long-to-save-1-million/">
+        <div class="blog-card-tag">Strategy</div>
+        <div class="blog-card-title">How Long Does It Actually Take to Save $1 Million?</div>
+        <div class="blog-card-excerpt">The math is more forgiving than you think — but only if you start early. Here's a decade-by-decade breakdown.</div>
+        <div class="blog-card-meta">8 min read</div>
+      </a>
+      <a class="blog-card" href="/blog/compound-interest-explained/">
+        <div class="blog-card-tag">Basics</div>
+        <div class="blog-card-title">Compound Interest: The Only Force Powerful Enough to Make You Rich Without Working</div>
+        <div class="blog-card-excerpt">Einstein called it the eighth wonder of the world. Here's why starting at 25 vs 35 is a half-million dollar decision.</div>
+        <div class="blog-card-meta">6 min read</div>
+      </a>
+      <a class="blog-card" href="/blog/savings-rate-guide/">
+        <div class="blog-card-tag">Tactics</div>
+        <div class="blog-card-title">Your Savings Rate Is the Only Number That Matters (And How to Hack It)</div>
+        <div class="blog-card-excerpt">Forget investment returns. The single most powerful lever you control is what percentage of income you keep.</div>
+        <div class="blog-card-meta">7 min read</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Articles</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+      <p class="footer-copy">
+        © 2025 WhenWillIMakeAMillion.com — For informational purposes only. Not financial advice.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Share Card Modal -->
+  <div class="modal-overlay" id="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-modal-headline">
+    <div class="share-card">
+      <button class="share-card-close" id="share-modal-close" aria-label="Close share card">✕</button>
+      <div class="share-card-rocket">🚀</div>
+      <h2 class="share-card-headline" id="share-modal-headline">
+        I'll be a millionaire by <span class="gold" id="share-year">—</span>
+      </h2>
+      <p class="share-card-sub" id="share-sub-text">That's in <strong id="share-years-text">—</strong> — from literally nothing but consistency.</p>
+      <p class="share-card-url">whenwillimakeamillion.com</p>
+      <div class="share-card-actions">
+        <button class="btn-share-twitter" id="btn-tweet" type="button">
+          𝕏 Share on Twitter / X
+        </button>
+        <button class="btn-copy-link" id="btn-copy-link" type="button">
+          📋 Copy to Clipboard
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Calculator JS -->
+  <script src="/assets/js/calculator.js"></script>
+
+</body>
+</html>

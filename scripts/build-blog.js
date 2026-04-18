@@ -71,6 +71,7 @@ function buildPostHTML(frontmatter, htmlContent, relatedArticles) {
   }
   </script>
 
+  <meta name="google-adsense-account" content="${ADSENSE_PUB}">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,20 +101,6 @@ function buildPostHTML(frontmatter, htmlContent, relatedArticles) {
     </div>
   </header>
 
-  <!-- Ad unit — top of post -->
-  <div style="max-width: 720px; margin: 0 auto; padding: 0 24px;">
-    <div class="ad-unit">
-      <div class="ad-unit-label">Advertisement</div>
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="${ADSENSE_PUB}"
-        data-ad-slot="auto"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-  </div>
-
   <article class="post-body">
     ${htmlContent}
 
@@ -123,20 +110,6 @@ function buildPostHTML(frontmatter, htmlContent, relatedArticles) {
       <a href="/" class="btn-cta">Use the Calculator →</a>
     </div>
   </article>
-
-  <!-- Ad unit — end of post -->
-  <div style="max-width: 720px; margin: 0 auto; padding: 0 24px;">
-    <div class="ad-unit">
-      <div class="ad-unit-label">Advertisement</div>
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="${ADSENSE_PUB}"
-        data-ad-slot="auto"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-  </div>
 
   ${relatedHTML ? `
   <section class="related-section">

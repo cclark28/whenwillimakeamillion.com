@@ -4,7 +4,7 @@ slug: "your-true-hourly-rate"
 description: "Divide your take-home pay by every hour your job actually costs you. The number is smaller than you think — and it makes a lot of decisions obvious."
 date: "2026-04-14"
 tag: "Mindset"
-readTime: "4 min read"
+readTime: "8 min read"
 ---
 
 Here's a small mental trick that quietly rewires how you think about money.
@@ -19,30 +19,88 @@ What's the number?
 
 For most people, it's somewhere between "less than I thought" and "actually somewhat alarming."
 
-A person earning $75,000 a year looks like they make about $36/hour on paper. But after taxes, commuting costs, work-related expenses, and actual hours spent — including a 45-minute commute each way — the real number is often closer to $18–22/hour.
+## The Full Calculation
 
-That's not a tragedy. It's just the actual number.
+Here's how to do it properly.
 
-## Why This Matters
+**Step 1: Find your actual take-home pay.**
+Start with your gross annual salary. Subtract federal and state taxes, FICA, health insurance premiums, and any other mandatory deductions. What actually lands in your bank account each year is your real starting number. For most people earning $60k–$100k, this is roughly 65–75% of gross.
+
+**Step 2: Subtract job-related expenses.**
+Be honest about what you spend specifically because of the job:
+- Commuting costs (gas, transit, parking, car wear-and-tear — the IRS mileage rate of $0.67/mile is a decent estimate)
+- Work clothing you wouldn't otherwise buy or maintain
+- Work lunches, convenience coffees, anything you buy because you're at the office
+- Childcare costs that only exist because both parents work
+- Any service you pay for because the job leaves you too exhausted to do it yourself — house cleaning, lawn care, prepared meals
+
+**Step 3: Count the real hours.**
+Your employer pays for 40 hours a week. Add:
+- Commute time each day (both directions)
+- Getting ready for work time
+- Work-related stress or task spillover in evenings and weekends
+- The Sunday evening dread hours — that low-grade anxiety is real time your job takes
+
+For a typical commuter with a 45-minute each-way commute, that's 7.5 hours per week just traveling. Add 30 minutes per day to get ready for work you wouldn't spend getting ready for a home day: another 2.5 hours. That's 10 extra hours per week the job costs you.
+
+**Step 4: Divide.**
+(Adjusted take-home pay) ÷ (Total real annual hours)
+
+## What the Math Looks Like
+
+A person earning $75,000 gross looks like they make about $36/hour on paper.
+
+After taxes and deductions, take-home is roughly $53,000. Subtract $3,600 in annual commuting costs and $1,200 in work-related expenses: $48,200 in real net.
+
+Real hours: 2,080 paid hours + 500 hours of commuting and prep time = 2,580 hours.
+
+True hourly rate: $48,200 ÷ 2,580 = **$18.68/hour**.
+
+That's not a tragedy. It's just the actual number. And knowing it changes how you think about nearly every spending decision.
+
+## Why This Changes Everything
 
 Once you know your true hourly rate, everything gets a filter.
 
-That $300 flight upgrade you're considering? That's 15 hours of your life. Is it worth it? Maybe — long flights are brutal. But now you're asking the right question.
+That $300 flight upgrade you're considering? That's roughly 16 hours of your actual life at $18.68/hour. Is it worth it? Maybe — long flights are brutal and you need to arrive functional. But now you're asking the right question.
 
-The gym membership you haven't used in four months at $60/month? That's 3 hours of your life, monthly, for a service you're actively avoiding. Cancel it.
+The gym membership you haven't used in four months at $60/month? That's 3.2 hours of your life, every month, for a service you're actively avoiding. Cancel it.
 
-The $50 restaurant dinner vs. $15 of groceries? The $35 difference is less than 2 hours. Sometimes that's an easy call. Sometimes the convenience is genuinely worth it. But now you're trading your time, not just your money — which is a much more clarifying way to think about it.
+The $50 restaurant dinner versus $15 of groceries? The $35 difference is less than 2 hours. Sometimes convenience is worth 2 hours of life — especially if you're exhausted and the alternative is eating something sad at 9pm. But now you're trading your life, not just your money — which is a much more clarifying frame.
 
-This framework comes from the personal finance classic *Your Money or Your Life* by Vicki Robin, and it's one of those ideas that sounds simple until you actually run the numbers on yourself. Then it sticks.
+This framework comes from the personal finance classic *Your Money or Your Life* by Vicki Robin, where it's called "life energy." The core idea is that money is something you trade your finite time and energy for — and that trade is worth making consciously.
 
-## The Other Side of the Calculation
+## Using It to Evaluate Job Offers
 
-The same logic applies to earning more.
+This calculation becomes especially powerful when you're comparing job offers or considering a career move.
 
-A side hustle that pays $30/hour but requires 10 hours of setup, client emails, invoicing, and admin? The effective rate might be $18/hour once you're honest about all the time involved. Still decent, maybe worth it — but worth knowing.
+**Job A:** $90,000, 1-hour commute each way, no remote flexibility
+**Job B:** $80,000, fully remote, no commute
 
-A raise of $5,000/year sounds great. Divided across 2,000 real work hours, that's $2.50/hour. Still good. Just contextualizes it.
+Job A gross is 12.5% higher. But after running the numbers:
 
-This isn't about being cynical about work or money. It's about having accurate data. Most financial decisions become much clearer when you price them in hours of your actual life rather than abstract dollar amounts.
+Job A true hourly: $90k → ~$63k take-home → subtract ~$5,000 in commuting costs → $58k real net. Real hours: 2,080 + 500 commute = 2,580. True rate: **$22.48/hour**.
 
-Figure out your number. It takes 20 minutes and it'll probably change how you think about money for years.
+Job B true hourly: $80k → ~$56k take-home → no commuting costs → $56k real net. Real hours: 2,080. True rate: **$26.92/hour**.
+
+Job B pays 19.7% more per real hour despite a 11% lower headline salary. The "lower paying" job actually pays more — when you measure correctly.
+
+This doesn't mean you always pick the remote job. Some people want to go into an office. Some jobs have non-financial value in the in-person environment. But you should make that tradeoff knowingly, not because you defaulted to comparing gross salaries.
+
+## Applying It to Side Hustles
+
+The same logic applies to any income-generating work you take on outside your main job.
+
+A freelance writing gig that pays $500 for an article sounds great. But if it took 4 hours of writing plus 2 hours of client emails, revision rounds, invoicing, and admin — that's 6 hours, or $83/hour. Still decent, maybe worth it.
+
+A rideshare side hustle that nets $300 over a weekend includes car depreciation, gas, insurance risk, and 12 hours of your time. The effective rate is often $18–22/hour after expenses. Fine if you need it. But worth knowing.
+
+The framework helps you decide where additional hours of your life are worth deploying.
+
+## Finding Your Number
+
+This calculation takes about 20 minutes and tends to stick in your mind for years. Run it on yourself. The number is probably smaller than your headline salary suggests — but it's the real one.
+
+Once you know it, you'll find yourself naturally making better decisions: canceling things you don't use, spending on things that genuinely save your time, thinking twice before buying things that cost 10 hours of your actual life.
+
+Your time is finite in a way your salary isn't. Pricing it honestly is one of the more clarifying things you can do.
